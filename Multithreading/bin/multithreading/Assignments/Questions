@@ -1,0 +1,140 @@
+✅ 1. Thread Basics
+Concepts: Thread class, Runnable interface, start(), run(), join()
+
+Assignments:
+
+ Create a simple program with two threads printing numbers from 1 to 10.
+
+ Implement Runnable using both lambda and anonymous inner class.
+
+ Launch multiple threads and use join() to ensure they complete before main thread exits.
+
+✅ 2. Thread Lifecycle & Thread States
+Concepts: NEW, RUNNABLE, BLOCKED, WAITING, TIMED_WAITING, TERMINATED
+
+Assignments:
+
+ Write a program to demonstrate different thread states using Thread.sleep(), join(), and synchronization.
+
+✅ 3. Thread Priorities & Daemon Threads
+Concepts: setPriority(), setDaemon(), thread scheduling
+
+Assignments:
+
+ Create a thread that runs as a daemon and logs time every second.
+
+ Launch threads with different priorities and observe output.
+
+✅ 4. Synchronization and Locks
+Concepts: synchronized block/method, race conditions, intrinsic locks
+
+Assignments:
+
+ Create a shared counter accessed by multiple threads (increment 1000 times each) — show race condition.
+
+ Add synchronization to avoid the race condition.
+
+ Use synchronized block on custom object and class-level lock.
+
+✅ 5. Reentrant Locks and Condition
+Concepts: ReentrantLock, tryLock(), Condition, await(), signal()
+
+Assignments:
+
+ Rewrite synchronized counter with ReentrantLock.
+
+ Implement producer-consumer using Condition instead of wait/notify.
+
+✅ 6. Inter-thread Communication
+Concepts: wait(), notify(), notifyAll()
+
+Assignments:
+
+ Implement producer-consumer problem using wait/notify.
+
+ Implement a ping-pong thread alternation using two threads and wait/notify.
+
+✅ 7. Thread Pools (Executor Framework)
+Concepts: ExecutorService, FixedThreadPool, CachedThreadPool, SingleThreadExecutor, shutdown()
+
+Assignments:
+
+ Create a thread pool and submit 10 tasks (print thread name and sleep).
+
+ Measure performance difference between Fixed and Cached thread pool with 100 tasks.
+
+✅ 8. Callable and Future
+Concepts: Callable<V>, Future<V>, get(), isDone(), timeout
+
+Assignments:
+
+ Submit 5 callables to a thread pool that return square of a number.
+
+ Use Future.get(timeout) and handle TimeoutException.
+
+✅ 9. ScheduledExecutorService
+Concepts: schedule(), scheduleAtFixedRate(), scheduleWithFixedDelay()
+
+Assignments:
+
+ Schedule a task that runs after 5 seconds delay.
+
+ Schedule a heartbeat task that logs every 2 seconds.
+
+✅ 10. ForkJoin Framework
+Concepts: ForkJoinPool, RecursiveTask, parallelism
+
+Assignments:
+
+ Use ForkJoin to compute factorial of N recursively.
+
+ Use ForkJoinPool to sum a large array of integers.
+
+✅ 11. Work Stealing Pool
+Concepts: Executors.newWorkStealingPool()
+
+Assignments:
+
+ Submit 100 CPU-bound tasks to WorkStealingPool and compare performance to FixedThreadPool.
+
+✅ 12. CompletableFuture (Java 8)
+Concepts: supplyAsync(), thenApply(), thenAccept(), thenCombine(), thenCompose(), exceptionally()
+
+Assignments:
+
+ Fetch a list of users from a fake service using supplyAsync(), then transform it.
+
+ Chain multiple stages using thenApply() and thenAccept().
+
+ Combine two futures (e.g., fetch price and discount) using thenCombine().
+
+ Compose dependent futures (e.g., fetch user, then fetch orders of user) using thenCompose().
+
+ Add exception handling using exceptionally() or handle().
+
+✅ 13. Parallel Streams vs CompletableFuture
+Assignments:
+
+ Compare performance of processing a list of 10,000 items using parallel streams and CompletableFuture.
+
+✅ 14. ThreadLocal and InheritableThreadLocal
+Assignments:
+
+ Use ThreadLocal to store request ID per thread.
+
+ Demonstrate how InheritableThreadLocal behaves when a child thread inherits parent’s value.
+
+✅ 15. Deadlock and Avoidance
+Assignments:
+
+ Write code to demonstrate deadlock between two threads.
+
+ Implement deadlock detection or prevention using lock ordering.
+
+✅ 16. Advanced: Custom ThreadPoolExecutor
+Assignments:
+
+ Create a custom ThreadPoolExecutor with bounded queue and rejection policy.
+
+ Monitor thread pool stats (active count, queue size, etc.)
+
